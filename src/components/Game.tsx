@@ -1,9 +1,13 @@
 import React from "react";
-import { Cities, CityData } from "../constants";
+import { CityData } from "../constants";
+import { Board } from "./Board";
 
 interface GameProps {
   answer: CityData;
-  cities: Cities;
 }
 
-export const Game = ({ answer, cities }: GameProps) => <div />;
+export const Game = ({ answer }: GameProps) => (
+  <div className="game">
+    <Board answer={answer} />
+  </div>
+);

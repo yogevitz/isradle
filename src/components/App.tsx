@@ -4,8 +4,6 @@ import { getCityData, getRandomNum, getTodaysAnswerCity } from "../utils";
 import { About, Game, Footer } from ".";
 import "./App.css";
 
-const ANSWER_CITY = getTodaysAnswerCity();
-
 export const App = () => {
   const [isAboutOpen, setIsAboutOpen] = useState(false);
   const [color, setColor] = useState(COLORS[0]);
@@ -13,7 +11,8 @@ export const App = () => {
 
   useEffect(() => {
     const init = async () => {
-      const newAnswerCityData = await getCityData(ANSWER_CITY);
+      const answerCity = getTodaysAnswerCity();
+      const newAnswerCityData = await getCityData(answerCity);
       setAnswerCityData(newAnswerCityData);
     };
     init();

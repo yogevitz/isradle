@@ -3,8 +3,6 @@ import { ANSWERS } from "./assets";
 import {
   API,
   AVG_ELEVATION,
-  CITIES_RESOURCE_ID,
-  CITIES_LIMIT,
   CITY_INFO_RESOURCE_ID,
   COORDINATES,
   ESTABLISHED_YEAR,
@@ -73,19 +71,3 @@ export const getCityData = (city: string) =>
       };
     }
   );
-
-export const getCitiesList = () =>
-  axios
-    .get(`${API}?resource_id=${CITIES_RESOURCE_ID}&limit=${CITIES_LIMIT}`)
-    .then(
-      ({
-        data: {
-          result: { records },
-        },
-      }) => {
-        return records
-          .map((city: any) => city["שם_ישוב"].slice(0, -1))
-          .filter((name: string) => !name.includes("("))
-          .sort((a: string, b: string) => a.localeCompare(b));
-      }
-    );

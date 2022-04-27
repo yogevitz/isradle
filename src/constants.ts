@@ -4,8 +4,6 @@ export const GITHUB_LINK = "https://github.com/yogevitz/isradle";
 export const NUMBER_OF_GUESSES = 6;
 export const API = `https://data.gov.il/api/3/action/datastore_search`;
 export const CITY_INFO_RESOURCE_ID = "351d4347-8ee0-4906-8e5b-9533aef13595";
-export const CITIES_RESOURCE_ID = "5c78e9fa-c2e2-4771-93ff-7f400a12f7ba";
-export const CITIES_LIMIT = 1300;
 
 export const NAME = "שם יישוב";
 export const POPULATION = "סך הכל אוכלוסייה 2019";

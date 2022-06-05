@@ -17,7 +17,7 @@ export const getRandomNum = (max: number) => Math.floor(Math.random() * max);
 export const getTodaysAnswerCity = () =>
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-ignore
-  ANSWERS[new Date().toISOString().split("T")[0]];
+  ANSWERS[new Date().toISOString().split("T")[0]] || 'גן יבנה';
 
 export const getDirection = (a: Coordinates, b: Coordinates): Direction => {
   let ans =
